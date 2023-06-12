@@ -19,7 +19,7 @@ public class FreemarkerCreateWordUtil {
 
     static {
         configuration = new Configuration(new Version("2.3.0"));
-        configuration.setDefaultEncoding("utf-8");
+        configuration.setDefaultEncoding(StandardCharsets.UTF_8.toString());
         //获取模板路径    setClassForTemplateLoading 这个方法默认路径是webRoot 路径下
         configuration.setClassForTemplateLoading(FreemarkerCreateWordUtil.class, "/templates");
     }
@@ -49,7 +49,7 @@ public class FreemarkerCreateWordUtil {
         Template t = template;
         try {
             // 这个地方不能使用FileWriter因为需要指定编码类型否则生成的Word文档会因为有无法识别的编码而无法打开
-            Writer w = new OutputStreamWriter(new FileOutputStream(f), "utf-8");
+            Writer w = new OutputStreamWriter(new FileOutputStream(f), StandardCharsets.UTF_8.toString());
             t.process(dataMap, w);
             w.close();
         } catch (Exception ex) {
