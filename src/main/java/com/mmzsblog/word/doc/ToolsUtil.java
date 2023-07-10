@@ -1,4 +1,4 @@
-package com.mmzsblog.word.utils;
+package com.mmzsblog.word.doc;
 
 import com.documents4j.api.DocumentType;
 import com.documents4j.api.IConverter;

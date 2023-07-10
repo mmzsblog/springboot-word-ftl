@@ -1,17 +1,15 @@
-package com.mmzsblog.word.utils;
+package com.mmzsblog.word.doc;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.Version;
 
-import javax.servlet.http.HttpServletResponse;
 import java.io.*;
-import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 /**
- * 模板word导出，工具类
+ * 模板word创建生成，工具类
  */
 public class FreemarkerCreateWordUtil {
 
@@ -29,7 +27,7 @@ public class FreemarkerCreateWordUtil {
     }
 
     /**
-     * 根据 /resources/templates 目录下的ftl模板文件生成文件并写到客户端进行下载
+     * 根据 /resources/templates 目录下的ftl模板文件生成文件并写到客户端
      *
      * @param map         数据集合
      * @param fileName    用户下载到的文件名称

@@ -1,4 +1,4 @@
-package com.mmzsblog.word.utils;
+package com.mmzsblog.word.doc;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -29,7 +29,7 @@ public class FreemarkerExportWordUtil {
     }
 
     /**
-     * 根据 /resources/templates 目录下的ftl模板文件生成文件并写到客户端进行下载
+     * 根据 /resources/templates 目录下的ftl模板文件生成文件并写到客户端，然后返回请求端进行下载
      *
      * @param response    HttpServletResponse
      * @param map         数据集合
